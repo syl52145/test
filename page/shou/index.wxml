@@ -1,0 +1,94 @@
+<!--page/shou/index.wxml-->
+<view class="page">
+    <!-- <view class="page-bottom" style="{{translate}}">
+        <image bindtap="tap_ch" class="icons" src="../../images/back.png"></image>
+        <view class="page-content">
+            <navigator class="wc" url="/page/shou/index">寄快递</navigator>         
+            <navigator class="wc" url="/page/search/index">查快递</navigator>                  
+            <navigator class="wc" url="/page/manage/index">订单管理</navigator>
+            <navigator class="wcc" url="/page/login/index">
+                <image class="admin" src="../../images/admin.png"></image>
+                <text>登录</text>
+            </navigator>
+        </view>
+    </view> -->
+    <import src="/temp/temp.wxml" />
+    <template is="temp" data="{{translate}}"></template>
+    <view class="mask"  bindtap="tap_ch" wx:if="{{open}}"></view>
+    <view class="page-top">
+        <view class="header">
+            <image bindtap="tap_ch" class="icons" src="/images/btn.png"></image>
+            <text>寄快递</text>
+        </view>  
+        <view class="container">
+            <view class="shoujian">
+                <view class="title">
+                    <image style="width:25px;height:25px;" src="../../images/shou.png"></image>
+                    <text>收件人</text>
+                    <view class="clear" wx:if="{{showClear}}" bindtap="clearData">
+                        <icon type="clear" size="15"></icon>
+                        <text style="font-size:14px;">清空</text>
+                    </view>  
+                </view>
+                <view class="detail-s">
+                        <view class="temp">
+                            <view class="temp-li" style="width:30%;">
+                                <text style="{{gotop.name}}">姓名</text>
+                                <input type="text" bindfocus="goTop" bindblur="goBottom" bindinput="inputData" data-name="name" value="{{sList.name}}" />
+                            </view>
+                            <view class="temp-li" style="width:68%;">
+                                <text style="{{gotop.phone}}">手机号</text>
+                                <input type="text" bindfocus="goTop" bindblur="goBottom" bindinput="inputData" data-name="phone" value="{{sList.phone}}" />
+                            </view>
+                        </view>
+                        <view class="temp">
+                            
+                            <view class="temp-li" style="width:100%">
+                                <text style="top:0;">城市/区域</text>
+                                <picker  mode="multiSelector" range="{{multiArray}}" bindchange="bindPicker" bindcolumnchange="bindColumnPicker"  value="{{multiIndex}}" class="aa" style="width:100%;height:100%;">
+                                    <view style="width: 100%;position: relative;" wx:if="{{sIndex}}">
+                                        <!-- {{multiArray[0][multiIndex[0]]}} -->
+                                        {{city}}
+                                        <view style="width:40px;display: inline-block;"></view>
+                                        <!-- {{multiArray[1][multiIndex[1]]}},{{sjrId}}/// , -->
+                                        {{region}}
+                                    </view>
+                                    <view class="picker" style="width: 100%;position: relative;" wx:else>
+                                        请选择城市/区域
+                                    </view>
+                                </picker>
+                            </view>
+                        </view>
+                        <view class="temp">
+                                <view class="temp-li" style="width:100%">
+                                    <text style="{{gotop.address}}">详细地址（精确到门牌号）</text>
+                                    <input type="text" bindfocus="goTop" bindblur="goBottom" bindinput="inputData" data-name="address" value="{{sList.address}}"/>
+                                </view>
+                        </view>
+                        <!-- <view class="temp">
+                            <view class="temp-li" style="width:100%">
+                                <text style="{{gotop.gs}}">公司名称（选填）</text>
+                                <input type="text" bindfocus="goTop" bindblur="goBottom" bindinput="inputData" data-name="gs" value="{{jList.gs}}"/>
+                            </view>
+                        </view> -->
+                    </view>
+                </view>
+                <view class="history">
+                    <text style="position:relative;left:-10px;">历史记录</text>
+                    <view class="list-h" wx:for="{{hList}}" wx:key="{{index}}" bindtap="insertData" data-index="{{index}}">
+                        <view class="list-name">
+                            <text class="name-h">{{item.name}}</text>
+                            <text style="color:#000;">{{item.phone}}</text>
+                        </view>
+                        <view class="list-name">
+                            <text class="address-h">{{item.city}} {{item.region}}</text>
+                            <text>{{item.address}}</text>
+                        </view>
+                        <image class="icon-h" style="width:25px;height:25px;" src="{{hPic==index?'../../images/insert.png':'../../images/uninsert.png'}}" data-index="{{index}}"></image>
+                    </view>
+                </view>
+            <image class="ok" src='../../images/nook.png' wx:if="{{!isOk}}"></image>
+            <image class="ok" src='../../images/ok.png' wx:if="{{isOk}}" bindtap="goNext"></image>  
+        </view>
+    </view>
+</view>

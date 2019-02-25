@@ -1,0 +1,73 @@
+/* page/sendGoods/index.wxss */
+page{
+    background: #fff;
+}
+.admin-s{
+    background: #666;
+    color: #fff; 
+}
+.content1{
+    margin-top:70px;
+    width: 100%;
+}
+.sel{
+    width: 100%;
+    display: flex;
+    padding:10px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.sel .shuoming{
+    color:black;
+    align-items: center;
+}
+.diver{
+    flex:1;
+    height:30px;
+    border:1px solid #ddd;
+    position: relative;
+    line-height: 30px;
+    padding-left:5px;
+    border-radius: 5px;
+}
+.diver-sel{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 200px;
+    width:100%;
+    border:1px solid green;
+    z-index: 50;
+    background: #fff;
+    border-radius: 5px;
+}
+.diver-sel .diver-name{
+    display: block;
+    padding:5px 10px;
+    border-bottom:1px solid #ddd;
+}
+.diver-sel .diver-name:last-child{
+    border-bottom:0px;
+}
+.change{
+    margin-left:5px;
+    background: #ddd;
+    padding:0 2px;
+    height: 30px;
+    border-radius:5px;
+    line-height: 30px;
+}
+.saoma{
+    margin-top: 70px;
+    text-align: center;
+}
+.saoma-pic{
+    width: 150px;
+    height: 150px;
+}
+
+.shoudong{
+    margin-top:70px;
+    padding:0 10px;
+}

@@ -1,0 +1,28 @@
+<!--temp/temp.wxml-->
+<template name="temp">
+    <view class="page-bottom" style="{{translate}}">
+        <image bindtap="tap_ch" class="icons" src="/images/back.png"></image>
+        <view class="page-content">
+            <navigator class="wc" url="/page/shou/index">寄快递</navigator>         
+            <navigator class="wc" url="/page/search/index">查快递</navigator>                  
+            <navigator class="wc" url="/page/manage/index">订单管理</navigator>
+            <navigator class="wcc" url="/page/login/index">
+                <image class="admin" src="../../images/admin.png"></image>
+                <text>登录</text>
+            </navigator>
+        </view>
+    </view>
+</template>
+
+<template name="temp1">
+    <view class="page-bottom" style="{{translate}}">
+        <image bindtap="tap_ch" class="icons" src="/images/back.png"></image>
+        <view class="page-content">
+            <navigator class="wc" url="/page/admin/index">仓管员界面</navigator>
+            <navigator class="wcc" url="/page/login/index">
+                <image class="admin" src="../../images/admin.png"></image>
+                <text>退出登录</text>
+            </navigator>
+        </view>
+    </view>
+</template>

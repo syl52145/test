@@ -1,0 +1,22 @@
+<!-- page/admin/index.wxml -->
+<view class="page">
+    <import src="/temp/temp.wxml"/>
+    <template is="temp1" data="{{translate}}"></template>
+    <view class="mask"  bindtap="tap_ch" wx:if="{{open}}"></view>
+    <view class="page-top">
+        <view class="header admin-s">
+            <image bindtap="tap_ch" class="icons" src="/images/btn.png"></image>
+            <text>仓管员界面</text>
+        </view> 
+        <view class="content1">
+            <navigator class="item" url="/page/sendGoods/index">
+                <image class="item-pic" src="/images/出库.png"></image>
+                <text class="item-text">出库发货</text>
+            </navigator>
+            <navigator class="item" url="/page/sendGoods/index">
+                <image class="item-pic" src="/images/出库.png"></image>
+                <text class="item-text">司机信息</text>
+            </navigator>
+        </view>
+    </view>
+</view>

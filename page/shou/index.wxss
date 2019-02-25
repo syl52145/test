@@ -1,0 +1,90 @@
+/* page/shou/index.wxss */
+
+.wxLogin{
+  width: 50%;
+  font-size: 18px;
+}
+.title{
+  display: flex;
+  width: 100%;
+  padding: 20px 0 10px 10px;
+  background: #fff;
+  
+}
+.title>text{
+  margin-left:5px;
+}
+.clear{
+  position: absolute;
+  right: 10px;
+  width:50px;height: 22px;background: #f1f1f1;display: flex;align-items: center;padding-left:10px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius:12px; 
+}
+.clear text{
+  margin-left:2px;
+}
+.detail-s{
+  width: 100%;
+  padding:30rpx 40rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.temp{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0px;
+ 
+}
+.temp .temp-li{
+  position: relative;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ddd;
+}
+.temp-li text{
+  position: relative;
+  top:20px;
+  color:#666;
+}
+.history{
+  padding:10px 20px;
+  background: #fff;
+
+}
+.list-h {
+  position: relative;
+  font-size: 12px;
+  background: #f1f1f1;
+  color:#666;
+  padding:10rpx;
+  margin-top:10px;
+  /* border-bottom: 1px solid #ddd; */
+}
+.name-h{
+  font-size:15px;color:#000;width: 100px;display: inline-block;
+}
+.address-h{
+  /* display: inline-block; */
+  padding-right:15px;
+}
+.icon-h{
+  position: absolute;
+  right:10px;
+  top:10px;
+
+}
+
+.ok{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 30%;
+}
+
+.aa{
+  padding-top:5px;
+}
+.picker{
+  color:#666;
+}

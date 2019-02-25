@@ -1,0 +1,81 @@
+/* page/send/index.wxss */
+.history{
+    padding:10px 20px;
+    background: #fff;
+  
+}
+.list-h {
+    position: relative;
+    font-size: 12px;
+    background: #f1f1f1;
+    color:#666;
+    padding:10rpx;
+    margin-top:10px;
+    /* border-bottom: 1px solid #ddd; */
+  }
+  .name-h{
+    font-size:15px;color:#000;width: 100px;display: inline-block;
+  }
+  .address-h{
+    /* display: inline-block; */
+    padding-right:15px;
+  }
+  .icon-h{
+    position: absolute;
+    right:10px;
+    top:10px;
+  
+  }
+  
+  .ok{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30%;
+  }
+  
+  .shoujian{
+      display: flex;
+      align-items: center;
+      margin:0 20px;
+      background: #ddd;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+  }
+  .jijian{
+    display: flex;
+    align-items: center;
+    margin:0 20px;
+    background: #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.dd{
+    padding:10px 0;
+    background: #fff;
+}
+.detail{
+    margin:10px 20px 0px;
+    display: flex;
+}
+.detail .input{
+    width:40px;
+    border-bottom: 1px solid #666;
+    text-align:center;
+}
+.xiadan{
+    position: fixed;
+    bottom:20%;
+    left:50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 50px;
+    color:#fff;
+    background: #dc1e32;
+    text-align: center;
+    line-height: 50px;
+    border-radius:40px;
+}

@@ -1,0 +1,53 @@
+<!--page/sendGoods/index.wxml-->
+<view class="page" style="background:#fff;">
+    <import src="/temp/temp.wxml"/>
+    <template is="temp1" data="{{translate}}"></template>
+    <view class="mask"  bindtap="tap_ch" wx:if="{{open}}"></view>
+    <view class="page-top">
+        <view class="header admin-s">
+            <image bindtap="tap_ch" class="icons" src="/images/btn.png"></image>
+            <text>出仓发货</text>
+        </view> 
+        <view class="content1">
+            <view class="sel">
+                <view class="shuoming">
+                    发货司机：
+                </view>
+                <view class="diver">
+                    <scroll-view  scroll-y="true" class="diver-sel" wx:if="{{list}}"> 
+                        <text class="diver-name {{sel==index?'sel':''}}">aaa</text>
+                        <text class="diver-name {{sel==index?'sel':''}}">aaa</text>
+                        <text class="diver-name {{sel==index?'sel':''}}">aaa</text>
+                        <text class="diver-name {{sel==index?'sel':''}}">aaa</text>
+                        <text class="diver-name {{sel==index?'sel':''}}">aaa</text>
+                        <text class="diver-name {{sel==index?'sel':''}}">aaa</text>
+                        <text class="diver-name {{sel==index?'sel':''}}">aaa</text>
+                        <text class="diver-name {{sel==index?'sel':''}}">aaa</text>
+                        <text class="diver-name {{sel==index?'sel':''}}">aaa</text>      
+                    </scroll-view>
+                    <view style="color:#aaa;width: 100%;" wx:else>
+                        {{selName?selName:'请选择司机'}}
+                    </view>    
+                </view>
+                <view class="change" bindtap="change" wx:if="{{selName}}">
+                    更改
+                </view>
+            </view>
+            <view class="saoma">
+                <image class="saoma-pic" src="/images/search-s.png"></image>
+                <view>扫码录入</view>
+                
+            </view>
+            <view class="shoudong">
+                    <view class="shuoming">
+                        若单号破损需手动录入单号:
+                    </view>
+                    <view style="display:flex;margin:10px;align-items: center;">
+                        <input type="number" style="background:#f1f1f1;padding:2px 5px;flex: 1;height: 30px;border-radius: 5px;" placeholder="请输入单号"/>
+                        <text class="change" bindtap="sure">确定</text>
+                    </view>
+                </view>
+        </view>
+    </view>
+</view>
+

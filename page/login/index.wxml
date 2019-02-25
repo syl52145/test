@@ -1,0 +1,51 @@
+<!-- <view wx:if="{{!isHide}}">
+    <view wx:if="{{canIUse}}" >
+        <view class='header'>
+            <image src='/images/wx_login.png'></image>
+        </view>
+
+        <view class='content'>
+            <view>申请获取以下权限</view>
+            <text>获得你的公开信息(昵称，头像等)</text>
+        </view>
+
+        <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+            授权登录
+        </button>
+    </view>
+    <view wx:else>请升级微信版本</view>
+</view>
+
+<view wx:else>
+    <view>我的首页内容</view>
+</view> -->
+<view class="page" style="background:#fff;">
+    <view class="header">
+        <text>管理员登录</text>
+    </view>
+    <view class="login">
+        <image class="login-pic" src="../../images/login.png"></image>
+        <view class="temp">
+            <view class="temp-li" style="width:100%">
+                <text style="{{gotop.uname}}">请输入用户名</text>
+                <input type="text" bindfocus="goTop" bindblur="goBottom" bindinput="inputData" data-name="uname" value="{{user.uname}}"/>
+            </view>
+        </view>
+        <view class="temp">
+            <view class="temp-li" style="width:100%">
+                <text style="{{gotop.upwd}}">请输入密码</text>
+                <input type="text" bindfocus="goTop" bindblur="goBottom" bindinput="inputData" data-name="upwd" value="{{user.upwd}}"/>
+            </view>
+        </view>
+        <view class="temp">
+            <view class="checked" style="width:100%">
+                <text>记住密码</text>
+                <checkbox  bindtap="checkboxChange" checked="{{isCheck}}" />
+            </view>
+        </view>
+        <button class='bottom' type='primary' style="margin-top:40px;">
+            管理员登录
+        </button>
+    </view>
+
+</view>

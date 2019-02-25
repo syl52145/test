@@ -1,0 +1,103 @@
+<!--page/search/index.wxml-->
+<view class="page">
+    <view class="page-bottom" style="{{translate}}">
+        <image bindtap="tap_ch" class="icons" src="../../images/back.png"></image>
+        <view class="page-content">
+            <navigator class="wc" url="/page/shou/index">寄快递</navigator>         
+            <navigator class="wc" url="/page/cha/index">查快递</navigator>                  
+            <navigator class="wc" url="/page/manage/index">订单管理</navigator>
+            <navigator class="wcc" url="/page/login/index">
+                <image class="admin" src="../../images/admin.png"></image>
+                <text>登录</text>
+            </navigator>
+        </view>
+    </view>
+    <view class="mask"  bindtap="tap_ch" wx:if="{{open}}"></view>
+    <view class="page-top">
+        <view class="header">
+            <image bindtap="tap_ch" class="icons" src="../../images/btn.png"></image>
+            <text>查快件</text>
+            <image bindtap="tap_ch" class="icons1" src="../../images/search-s.png"></image>
+        </view>  
+        
+        <view class="container">
+            <view class="search">
+                <input type="text" placeholder="输入运单号或手机号查询"/>
+                <text style="height:35px;padding-left:10px;line-height: 35px;">查询</text>
+            </view>
+            <view class="linear"></view>
+
+            <view class="title-now">订单详情</view>
+            
+            <view  wx:if="{{!order}}"> 
+                <view class="now list-h" wx:if="{{!orderList}}">
+                    <image style="width:20px;height:20px;" src="../../images/shou.png"></image>
+                    <view style="margin-left:10px;">
+                        <view class="list-name">
+                            <text class="name-h">小王</text>
+                            <text style="color:#000;">12345679</text>
+                        </view>
+                        <view class="list-name">
+                            <text class="address-h">虎门镇</text>
+                            <text>还会干付款蓝</text>
+                        </view>
+                        <image class="icon-h" style="width:20px;height:20px;" src="../../images/now.png"></image>
+                    </view>
+                </view>
+                
+                <view class="detail" wx:if="{{!orderDetail}}">
+                    <view class="shuoming" style="font-size:16px;">
+                        订单号：201902141435151                  
+                    </view>
+                    <view class="list-h now">
+                        <image style="width:20px;height:20px;" src="../../images/shou.png"></image>
+                        <view style="margin-left:10px;">
+                            <view class="list-name">
+                                <text class="name-h">小王</text>
+                                <text style="color:#000;">12345679</text>
+                            </view>
+                            <view class="list-name">
+                                <text class="address-h">虎门镇</text>
+                                <text>还会干付款蓝</text>
+                            </view>
+                            
+                        </view>
+                    </view>
+                    <view class="list-h now">
+                        <image style="width:20px;height:20px;" src="../../images/ji.png"></image>
+                        <view style="margin-left:10px;">
+                            <view class="list-name">
+                                <text class="name-h">小王</text>
+                                <text style="color:#000;">12345679</text>
+                            </view>
+                            <view class="list-name">
+                                <text class="address-h">虎门镇</text>
+                                <text>还会干付款蓝</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view  class="shuoming">
+                        订单价格：100.00 元
+                    </view>
+                    <view  class="shuoming">
+                        备注：哈哈
+                    </view>
+                    <view  class="shuoming">
+                        配送员：小明12
+                    </view>
+                    <view  class="shuoming">
+                        日期：2019-02-14 14:35:15
+                    </view>
+                </view>
+            </view>
+            <view class="no-order" wx:else>
+                <image style="width:100px;height: 100px;" src="../../images/no-order.png"></image>
+                <view>暂无订单！</view>
+            </view>
+
+           
+                
+        </view>
+
+    </view>
+</view>

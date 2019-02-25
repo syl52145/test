@@ -1,0 +1,74 @@
+/* page/search/index.wxss */
+.container{
+    background: #fff;
+  }
+  .now{
+    display: flex;
+    align-items: center;
+    margin:0 20px;
+    background: #ddd;
+    border-radius: 5px;
+  }
+  .list-h {
+    position: relative;
+    font-size: 15px;
+    color:#666;
+    padding:10rpx;
+    margin-top:1px;
+    /* border-bottom: 1px solid #ddd; */
+  }
+  .name-h{
+    font-size:16px;color:#000;width: 100px;display: inline-block;
+  }
+  .address-h{
+    /* display: inline-block; */
+    padding-right:5px;
+  }
+  .icon-h{
+    position: absolute;
+    right:10px;
+    top:10px;
+  }
+  .title-now{
+    height: 40px;
+    width: 100%;
+    background: #fff;
+    padding:0 10px;
+    line-height: 40px;
+  }
+  .no-order{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .no-order view{
+    color:#666;
+  }
+  .detail{
+    background:#f1f1f1;
+    padding:10px 0;
+  }
+  .shuoming{
+    margin:0px 20px 5px;
+    font-size:15px;
+  }
+  
+  .search{
+    display: flex;
+    margin:10px 20px 5px;
+    background: #fff;
+    align-items: center;
+  }
+  .search input{
+    flex:1;
+    border:1px solid #ddd;
+    padding:5px 10px;
+    background: #f1f1f1;
+    border-radius:5px;
+  }
+  .icons1{
+    position: absolute;
+    width:58rpx;
+    height:58rpx;
+    right:20rpx; 
+  }

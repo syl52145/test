@@ -1,0 +1,81 @@
+<!--page/send/index.wxml-->
+<view class="page">
+    <view class="page-bottom" style="{{translate}}">
+        <image bindtap="tap_ch" class="icons" src="../../images/back.png"></image>
+        <view class="page-content">
+            <navigator class="wc" url="/page/ji/index">寄快递</navigator>         
+            <navigator class="wc" url="/page/search/index">查快递</navigator>                  
+            <navigator class="wc" url="/page/manage/index">订单管理</navigator>
+            <navigator class="wcc" url="/page/login/index">
+                <image class="admin" src="../../images/admin.png"></image>
+                <text>登录</text>
+            </navigator>
+        </view>
+    </view>
+    <view class="mask"  bindtap="tap_ch" wx:if="{{open}}"></view>
+    <view class="page-top">
+        <view class="header">
+            <image bindtap="tap_ch" class="icons" src="../../images/btn.png"></image>
+            <text>寄快递</text>
+        </view>  
+        
+        <view class="container">
+            <view class="jijian list-h" bindtap="reviseData" data-type="jijian">
+                <image style="width:20px;height:20px;" src="../../images/ji.png"></image>
+                <view style="margin-left:10px;">
+                    <view class="list-name">
+                        <text class="name-h">{{jList.jList.name}}</text>
+                        <text style="color:#000;">{{jList.jList.phone}}</text>
+                    </view>
+                    <view class="list-name">
+                        <text class="address-h">{{jList.city}} {{jList.region}}</text>
+                        <text>{{jList.jList.address}}</text>
+                    </view>
+                    <image class="icon-h" style="width:20px;height:20px;" src="../../images/gai.png"></image>
+                </view>
+            </view>
+            <view class="shoujian list-h" bindtap="reviseData" data-type="shoujian">
+                <image style="width:20px;height:20px;" src="../../images/shou.png"></image>
+                <view style="margin-left:10px;">
+                    <view class="list-name">
+                        <text class="name-h">{{sList.sList.name}}</text>
+                        <text style="color:#000;">{{sList.sList.phone}}</text>
+                    </view>
+                    <view class="list-name">
+                        <text class="address-h">{{sList.city}} {{sList.region}}</text>
+                        <text>{{sList.sList.address}}</text>
+                    </view>
+                    <image class="icon-h" style="width:20px;height:20px;" src="../../images/gai.png"></image>
+                </view>
+            </view>
+
+            <view class="dd">
+                <view style="border-bottom: 1px solid #ddd;margin:0 10px;height: 40px;line-height: 40px;">快件详情</view>
+                <view class="detail">
+                    <text style="color:#666;margin-right:20px;">商品总件数:</text> 
+                    <input class="input" type="number" value="{{}}" bindinput="inputNumber"/>
+                    <text  style="color:#666;margin-left:20px;">件</text>
+                </view>
+                <view class="detail">
+                    <text style="color:#666;margin-right:20px;">商品总重量:</text> 
+                    <input class="input" type="text" value="{{}}" bindconfirm="inputWeight"/>
+                    <text  style="color:#666;margin-left:20px;">公斤</text>
+                </view>
+                <view class="detail">
+                    <text style="color:#666;margin-right:20px;">计算价格:</text> 
+                    <input class="input" type="text" value="{{price}}" style="color:red;border-bottom: 0px;" disabled/>
+                    <text  style="color:#666;margin-left:20px;">元</text>
+                </view>
+                <view class="detail">
+                    <text style="color:#666;margin-right:20px;">备注:</text> 
+                    <input bindinput="inputRemark" class="input" type="text" value="" placeholder="（选填）" style="flex:1;text-align: left;" />
+                </view>
+            </view>
+            <view class="xiadan">下单</view>
+        </view>
+
+
+    </view>
+</view>
+    
+    

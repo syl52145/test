@@ -1,0 +1,80 @@
+<!--page/search/index.wxml-->
+<view class="page">
+    <view class="page-bottom" style="{{translate}}">
+        <image bindtap="tap_ch" class="icons" src="../../images/back.png"></image>
+        <view class="page-content">
+            <navigator class="wc" url="/page/shou/index">寄快递</navigator>         
+            <navigator class="wc" url="/page/search/index">查快递</navigator>                  
+            <navigator class="wc" url="/page/admin/index">订单管理</navigator>
+            <navigator class="wcc" url="/page/login/index">
+                <image class="admin" src="../../images/admin.png"></image>
+                <text>登录</text>
+            </navigator>
+        </view>
+    </view>
+    <view class="mask"  bindtap="tap_ch" wx:if="{{open}}"></view>
+    <view class="page-top">
+        <view class="header">
+            <image bindtap="tap_ch" class="icons" src="../../images/btn.png"></image>
+            <text>订单管理</text>
+        </view>  
+        <view class="content" wx:if="{{login}}">
+            <text class="tishi">需微信授权登录</text>
+            <button class="wxLogin" open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信授权</button>
+        </view>
+        <view class="container" wx:else>
+            <view class="title-now">当前订单</view>
+            <view class="now list-h" wx:if="{{!nowOrder}}">
+                <view class="show" style=" border-right:1px solid #ddd;">
+                    <view>运单号：无</view>
+                    <view>下单时间：2019-01-02 17:00</view>
+                    <view class="list-address">
+                        <text class="address">虎门南栅</text>
+                        <image style="width:35px;height:20px;" src="../../images/yunshu.png"></image>
+                        <text class="address">广州市越秀区</text>
+                    </view>
+                    <view class="list-address">
+                        <text>王小明</text>
+                        <text style="color:black;">下单中</text>
+                        <text>大鹏</text>
+                    </view>   
+                </view>
+                <view class="delete">
+                    <image style="width:30px;height:30px;" src="../../images/chexiao.png"></image>
+                    <text style="color:black">撤销</text>
+                </view>
+            </view>
+
+            <view class="no-order" wx:else>
+                <image style="width:100px;height: 100px;" src="../../images/no-order.png"></image>
+                <view>暂无订单！</view>
+            </view>
+
+            
+            <view class="title-now">历史订单</view>
+            <view class="now list-h" wx:if="{{!nowOrder}}">
+                <view class="show">
+                    <view>运单号：无</view>
+                    <view>下单时间：2019-01-02 17:00</view>
+                    <view class="list-address">
+                        <text class="address">虎门南栅</text>
+                        <image style="width:35px;height:20px;" src="../../images/yunshu.png"></image>
+                        <text class="address">广州市越秀区</text>
+                    </view>
+                    <view class="list-address">
+                        <text>王小明</text>
+                        <text style="color:black;">运输中</text>
+                        <text>大鹏</text>
+                    </view>   
+                </view>
+            </view>
+
+            <view class="no-order" wx:else>
+                <image style="width:100px;height: 100px;" src="../../images/no-order.png"></image>
+                <view>暂无订单！</view>
+            </view>
+                
+        </view>
+
+    </view>
+</view>
